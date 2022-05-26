@@ -21,9 +21,9 @@ $(function(){
     $($(this).attr('href')).addClass('active');
   });
 
-  $('.info__dropdown-header').on('click', function(){
+  $('.info__dropdown-header, .footer__col-title').on('click', function(){
     $(this).toggleClass('active');
-    $(this).next('.info__dropdown-content').slideToggle();
+    $(this).next('.info__dropdown-content, .footer__list').slideToggle();
   });
 
 });

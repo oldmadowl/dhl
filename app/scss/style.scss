@@ -820,4 +820,77 @@
 //end clients
 
 
+//start footer
+.footer{
+  position: relative;
+  background: url(../images/footer-left-bg.jpg) 40px center no-repeat, url(../images/footer-right-bg.jpg) right 40px center no-repeat;
+  &::before,
+  &::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    top: 0;
+  }
+  &::before{
+    background-color: $red;
+    left: 0;
+  }
+  &::after{
+    background-color: $yellow;
+    right: 0;
+  }
+  &__inner{
+    padding: 50px 0 80px;
+    background-color: #fff;
+    padding-left: 100px;
+    padding-right: 200px;
+    display: flex;
+    justify-content: space-between;
+    transform: skew(15deg);
+  }
+  &__col{
+    flex-basis: 225px;
+    font-weight: 700;
+    line-height: 24px;
+    transform: skew(-15deg);
+    &-social{
+      flex-basis: 160px;
+    }
+  }
+  &__col-title{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: $red;
+    margin-bottom: 30px;
+  }
+  &__list-item{
+    display: block;
+  }
+  &__list-link{
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-left: 10px;
+    position: relative;
+    transition: all .3s;
+    &::before{
+      content: '\f0da';
+      position: absolute;
+      left: 0;
+      font-family: 'icomoon';
+      color: $red;
+    }
+    &:hover{
+      color: $yellow;
+    }
+  }
+  &__social-link{
+    &:hover{
+      color: #017edf;
+    }
+  }
+}
+//end footer
+
+
 @import 'media';
