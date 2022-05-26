@@ -2,6 +2,8 @@
 @import 'vars';
 @import 'global';
 
+
+//start header
 .header{
   font-size: 14px;
   line-height: 24px;
@@ -173,6 +175,7 @@
   }
   &-form{
     position: absolute;
+    z-index: 20;
     top: 100%;
     right: 0;
     height: 0;
@@ -198,6 +201,7 @@
     background-color: $red;
     border-bottom-right-radius: 20px;
     transition: all .3s;
+    overflow: hidden;
     &::before{
       content: '\f002';
       position: absolute;
@@ -220,5 +224,103 @@
     height: 50px;
   }
 }
+//end header
+
+
+//start offer
+.offer{
+  background-image: url(../images/offer-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(45deg, rgba(186,0,0,1) 0%,rgba(191,45,33,1) 29%,rgba(192,56,41,0.9) 36%,rgba(194,71,53,0.8) 46%,rgba(194,74,55,0.76) 48%,rgba(194,89,71,0.6) 55%,rgba(194,108,91,0.4) 64%,rgba(194,133,118,0.3) 76%,rgba(194,162,150,0.1) 90%,rgba(194,182,172,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ba0000', endColorstr='#00c2b6ac',GradientType=1 );
+  }
+  &__inner{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 50px 0;
+  }
+  &__title{
+    max-width: 450px;
+    font-size: 70px;
+    line-height: 80px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+  }
+  &__text{
+    max-width: 750px;
+    color: $yellow;
+    padding-top: 40px;
+    position: relative;
+    margin-bottom: 30px;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 4px;
+      background-color: $yellow;
+    }
+  }
+  &__advantages{
+    display: flex;
+    margin-bottom: 30px;
+    &-item{
+      font-weight: 700;
+      text-transform: uppercase;
+      & + &{
+        padding-left: 30px;
+        margin-left: 27px;
+        position: relative;
+        &::before{
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 8px;
+          width: 4px;
+          height: 4px;
+          background-color: $yellow;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  &__buttons{
+    display: flex;
+  }
+  &__btn-more{
+    @extend %btn;
+  }
+  &__btn-world{
+    font-size: 12px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 8px 34px;
+    margin-left: 20px;
+  }
+}
+//end offer
 
 @import 'media';

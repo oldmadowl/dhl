@@ -15,7 +15,7 @@
       border-bottom: 5px solid $red;
       padding: 20px 0;
       display: none;
-      z-index: 1;
+      z-index: 30;
     }
     &__item{
       display: block;
@@ -39,6 +39,53 @@
   }
   .header__bottom-inner{
     height: 90px;
+  }
+}
+
+@media (max-width: 500px){
+  .offer{
+    &__title{
+      font-size: 35px;
+      line-height: 45px;
+    }
+    &__inner{
+      font-size: 15px;
+      line-height: 25px;
+    }
+    &__advantages{
+      display: block;
+      &-item{
+        position: relative;
+        padding-left: 30px;
+        &::before{
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 10px;
+          width: 4px;
+          height: 4px;
+          background-color: #fc0;
+          border-radius: 50%;
+        }
+        & + &{
+          margin-left: 0;
+          margin-top: 5px;
+        }
+      }
+    }
+    &__buttons{
+      display: block;
+    }
+    &__btn-more{
+      width: 100%;
+      text-align: center;
+    }
+    &__btn-world{
+      margin-left: 0;
+      margin-top: 20px;
+      width: 100%;
+      text-align: center;
+    }
   }
 }
 

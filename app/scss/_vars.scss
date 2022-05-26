@@ -1,3 +1,16 @@
 $red: #ba0000;
 $yellow: #ffcc00;
 $text: #777;
+
+%btn{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 30px;
+  color: $red;
+  letter-spacing: 1px;
+  padding: 10px 30px;
+  box-shadow: 0px 10px 18px 0px rgba(255, 204, 0, 0.4);
+  background-color: $yellow;
+  border-radius: 30px;
+}
