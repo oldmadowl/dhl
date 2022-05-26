@@ -11,4 +11,19 @@ $(function(){
   });
 
 
+  $('.info__tabs-btn').on('click', function(e){
+    e.preventDefault();
+
+    $('.info__tabs-btn').removeClass('active');
+    $('.info__tab').removeClass('active');
+
+    $(this).addClass('active');
+    $($(this).attr('href')).addClass('active');
+  });
+
+  $('.info__dropdown-header').on('click', function(){
+    $(this).toggleClass('active');
+    $(this).next('.info__dropdown-content').slideToggle();
+  });
+
 });
