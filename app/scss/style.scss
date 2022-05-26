@@ -787,4 +787,37 @@
 //end slogan
 
 
+//start clients
+.clients{
+  padding: 70px 0;
+  &__list{
+    display: flex;
+    margin-left: -30px;
+  }
+  &__item{
+    width: calc(25% - 30px);
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    height: 130px;
+    background-color: #f9f9f9;
+    padding: 0 15px;
+    text-align: center;
+    border: 1px solid #eedbdb;
+    transition: all .3s;
+    &:hover{
+      border-color: $red;
+      cursor: pointer;
+    }
+  }
+  &__logo{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+//end clients
+
+
 @import 'media';

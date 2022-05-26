@@ -117,6 +117,16 @@
     margin-top: 50px;
     width: 200px;
   }
+  .clients{
+    padding-bottom: 40px;
+  }
+  .clients__list{
+    flex-wrap: wrap;
+  }
+  .clients__item{
+    width: calc(50% - 30px);
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 580px){
@@ -256,6 +266,9 @@
   }
   .services__item-img{
     height: 180px;
+  }
+  .clients__item{
+    width: 100%;
   }
 }
 
