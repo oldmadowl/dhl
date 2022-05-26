@@ -750,4 +750,41 @@
 }
 //end info
 
+
+//start slogan
+.slogan{
+  background-color: $red;
+  padding: 92px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+  }
+  &__content{
+    max-width: 745px;
+  }
+  &__title{
+    font-size: 30px;
+    line-height: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+  }
+  &__text{
+    line-height: 24px;
+  }
+  &__btn{
+    @extend %btn;
+    background-color: #a00000;
+    box-shadow: none;
+    color: #fff;
+    flex-shrink: 0;
+    margin-left: 20px;
+  }
+}
+//end slogan
+
+
 @import 'media';

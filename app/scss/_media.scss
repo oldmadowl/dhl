@@ -108,6 +108,15 @@
     width: 100%;
     width: calc(100% - 35px);
   }
+  .slogan__inner{
+    flex-direction: column;
+    text-align: center;
+  }
+  .slogan__btn{
+    margin-left: 0;
+    margin-top: 50px;
+    width: 200px;
+  }
 }
 
 @media (max-width: 580px){
@@ -183,6 +192,7 @@
   }
   .services__form{
     max-width: 420px;
+    padding: 15px;
   }
   .services__form-btn{
     margin-left: 0;
@@ -214,6 +224,23 @@
     font-size: 40px;
     line-height: 50px;
     padding-top: 0;
+  }
+  .slogan{
+    padding: 50px 0;
+  }
+  .slogan__title{
+    font-size: 25px;
+  }
+  .slogan__text{
+    font-size: 14px;
+  }
+  .services__form{
+    .jq-selectbox{
+      width: 100%;
+    }
+    .jq-selectbox__select{
+      width: 100%;
+    }
   }
 }
 
